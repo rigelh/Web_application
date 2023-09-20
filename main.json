@@ -1,0 +1,309 @@
+{
+  "ctor": "Container",
+  "props": {
+    "id": "mainContainer",
+    "classes": ["col-12"],
+    "css": {
+      "display": "block",
+      "justify-content": "space-between",
+      "background-color": "white",
+      "color": "white",
+      "border": "none"
+    },
+
+    "components": [
+      {
+        "ctor": "Container",
+        "props": {
+          "id": "navContainer",
+         
+          "classes": ["col-12"],
+          "css": {
+            "display": "flex",
+            "background-color": "#000000",
+            "color": "white",
+            "border": "none",
+        
+            "height": "fit-content"
+          },
+          "components": [
+            {
+              "ctor": "Container",
+              "props": {
+                "id": "imageContainer",
+                "classes": ["col-lg-2 col-md-2 col-sm-4"],
+
+                "css": {
+                  "align-self": "center",
+                  "display": "block",
+                  "text-align": "-webkit-center"
+                  
+                 
+                },
+                "components": [
+                  {
+                    "ctor": "Image",
+                    "props": {
+                      "id": "Image_nav",
+                      "label": "photo",
+                      "src": "/PROJECT/app/assets/images/Foot-Locker-Logo.png",
+                      "css": {
+                        "border": "none",
+                        "height": " 80%",
+                        "width": "72px"
+
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "ctor": "Container",
+              "props": {
+                "id": "HomeContainer",
+                "classes": ["col-lg-2 col-md-2 col-sm-4"],
+
+                "css": {
+                  "display": "block",
+                  "text-align": "-webkit-center",
+                  "align-self": "center"
+                 
+                },
+                "components": [
+                  {
+                    "ctor": "Link",
+                    "props": {
+                      "id": "label",
+                      "href": "https://www.footlocker.co.uk/en/",
+                      "label": "Home",
+                      "css": {
+                        "width": "fit-content",
+                        "font-size": "0.90rem",
+                        "font-weight": "500"
+                      },
+                      "classes": ["links_Navbar_webpage"]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "ctor": "Container",
+              "props": {
+                "id": "aboutContainer",
+                "classes": ["col-lg-2 col-md-2 col-sm-4"],
+
+                "css": {
+                  "display": "block",
+                  "text-align": "-webkit-center",
+                  "align-self": "center"
+                },
+                "components": [
+                  {
+                    "ctor": "Link",
+                    "props": {
+                      "id": "labelabout",
+                      "label": "About",
+                      "href": "https://www.footlocker.co.uk/en/About.html",
+
+                      "css": {
+                        "width": "fit-content",
+                        "font-size": "0.90rem",
+                        "font-weight": "500"
+                      },
+                      "classes": ["links_Navbar_webpage"]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "ctor": "Container",
+              "props": {
+                "id": "brandContainer",
+                "classes": ["col-lg-2 col-md-2 col-sm-4"],
+
+                "css": {
+                  "display": "block",
+                  "align-self": "center"
+                 
+                },
+                "components": [
+                  {
+                    "ctor": "DropDown",
+                    "props": {
+                      "id": "Dropdown1",
+                      "valueField": "key",
+                      "labelField": "title",
+                      "label": "Brand  ",
+                      "dataProvider": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "ctor": "Container",
+              "props": {
+                "id": "modelContainer",
+                "classes": ["col-lg-2 col-md-2 col-sm-4"],
+
+                "css": {
+                  "display": "block",
+                  "align-self": "center"
+                },
+                "components": [
+                  {
+                    "ctor": "DropDown",
+                    "props": {
+                      "id": "Dropdown2",
+                      "valueField": "key",
+                      "labelField": "title",
+                      "label": "Model ",
+
+                      "dataProvider": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "ctor": "Container",
+              "props": {
+                "id": "buttonContainer",
+                "classes": ["col-lg-2 col-md-2 col-sm-4"],
+
+                "css": {
+                  "display": "block",
+                  "text-align": "-webkit-center",
+                  "align-self": "center"
+                 
+                },
+                "components": [
+                  {
+                    "ctor": "Button",
+                    "props": {
+                      "id": "button_notification",
+                      "type": "",
+                      "value": "",
+
+                      "css": {
+                        "display": "block",
+                        "width": "38px",
+                        "height": "fit-content",
+                        "background-color": "#f8f9fa",
+                        "color": "black",
+                        "border-radius": "100px"
+                     
+                      },
+
+                      "classes": ["btn", "fa fa-bell"]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+
+      {
+        "ctor": "Modal",
+        "props": {
+          "id": "modal_notifications",
+          "size": "ModalSize.LARGE",
+          "title": "",
+          "css": {
+            "display": "block"
+          },
+          "display": false,
+
+          "components": {
+            "modalHeader": [
+              {
+                "ctor": "Heading",
+
+                "props": {
+                  "label": "Notifications"
+                }
+              },
+              {
+                "ctor": "Container",
+                "props": {
+                  "type": "btn-group",
+                  "id": "headerButtonsCnt",
+                  "css": {
+                    "gap": ".25rem"
+                  },
+                  "components": [
+                    {
+                      "ctor": "Button",
+                      "props": {
+                        "id": "dismissButton",
+                        "type": "button",
+                        "classes": ["btn", "btn-sm", "btn-secondary"],
+                        "width": "2.5rem",
+                        "attr": {
+                          "data-dismiss": "modal",
+                          "aria-label": "Dismiss"
+                        },
+                        "components": [
+                          {
+                            "ctor": "Label",
+                            "props": {
+                              "id": "fa",
+                              "labelType": "LabelType.i",
+                              "classes": ["fas", "fa-times"]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            "modalBody": [
+              {
+                "ctor": "List",
+                "props": {
+                  "id": "Modal_list",
+                  "multiselect": true,
+                  "rendering": {
+                    "direction": "vertical"
+                  },
+                  "css": {
+                    "margin-top": "30px"
+                  },
+
+                  "dataProvider": [],
+                  "valueField": "id",
+                  "classesField": "buttonClass",
+                  "defaultClasses": ["btn-default"],
+                  "selectedClasses": ["btn-success"],
+
+                  "components": [
+                    {
+                      "ctor": "Label",
+                      "props": {
+                        "id": "button",
+                        "type": "button",
+                        "value": "{id}",
+                        "label": "{source + '  :  ' + message}",
+                        "classes": "{buttonClass}",
+                        "css": {
+                          "display": "block"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
